@@ -1,0 +1,57 @@
+#corp-info #footer, #shareholder #footer{
+	
+	margin-top:200px;
+
+}
+
+#corp-info .content{
+	/*padding-bottom:400px;*/
+	min-height:700px;
+
+}
+#president-box{
+	top:0;
+	left:12%;
+}
+
+#about{
+	position:relative;}
+
+#about p.text{
+	position:relative;
+	top:10px;
+}
+
+#president h2{
+	position:relative;
+}
+#president img{
+	margin-top:0;
+}
+
+.text-offset1{
+	
+	
+}
+
+#unparalled-box{
+	top:-400px;
+}
+
+
+.home-slider, .text-offset1 {
+	width:460px;
+	height:90px;
+	left:-20px;
+
+}
+
+ul#downloads {
+	left: 100px;
+	}
+	
+
+#innov-text, #opp-text, #lead-text{
+	
+	
+}

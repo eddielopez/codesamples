@@ -17,10 +17,10 @@ var AppRouter = Backbone.Router.extend({
 
     initialize: function(){
 
-        this.menuItemView = new MenuItemDetails(
+        this.menuItemModel = new MenuList();
+        this.menuItemModel = new MenuItemDetails(
             {
-                siteurl: "www.google.com"
-
+                model: this.menuItemModel
             }
         );
 
@@ -43,7 +43,7 @@ var AppRouter = Backbone.Router.extend({
 
     itemDetails: function (item){
       /*reference the menuItemView object*/
-      this.menuItemView.options.sitename = item;
+      this.menuItemModel.set('name', item);
 
      /*
        call render function associated with this

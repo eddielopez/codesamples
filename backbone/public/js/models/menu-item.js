@@ -7,5 +7,5 @@ var MenuList = Backbone.Model.extend({
         ftpusername: "johndoe",
         ftpwd: "123456"
     }
-
+    
 });

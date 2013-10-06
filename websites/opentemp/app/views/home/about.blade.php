@@ -1,0 +1,1 @@
+<h1>About OpenTemp Page</h1>

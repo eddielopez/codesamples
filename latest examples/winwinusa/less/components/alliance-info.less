@@ -1,0 +1,35 @@
+/***
+
+  Alliance info component appears on the business dashboard
+  underneath the dashboard business profile.
+
+***/
+
+
+
+
+.info-content {
+  border: 1px solid #dadada;
+  width: 100%;
+  padding: 15px 0 30px 0;
+  margin-top: 11px;
+  margin-bottom: 20px;
+
+  table {
+    width: 100%;
+    tr + tr td {
+      border-top: 1px solid #dadada;
+    }
+    tr{
+      td  {
+        padding: 5px 15px;
+        &:first-child {
+          color: #81b7e3;
+          font-weight: bold;
+          font-size: 25px;
+        }
+      } // end td
+    }
+  } //end table
+
+} //End .info-content

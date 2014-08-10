@@ -1,0 +1,52 @@
+/***
+
+  RECOMMENDED ALLIANCE appear on the sidebar of the Business's alliances section.
+  This component is used by the business to fill their recommended tab.
+
+***/
+
+
+.rec-industry{
+  margin-top: -55px;
+  .pick-industry{
+    display: none;
+    width: 215px;
+    margin: 0 auto;
+    text-align: center;
+    background: #ececec;
+    padding: 10px;
+
+    p.text-center{
+      font-size: 13px;
+      font-family: 'TradeGothicNextW01-Bold 693229';
+    }
+
+    .radio-wrapper{
+      text-align: left;
+      margin-left: 60px;
+
+      label{
+        font-size: 13px;
+        font-family: 'TradeGothicNextW01-Bold 693229';
+        color: #000;
+      }
+    }
+
+    .btn-group .btn + .btn{
+      margin-left: 5px;
+    }
+
+  }
+  button {
+    &:hover,
+    &:focus{
+      outline: none !important;
+    }
+    &.join-alliance{
+      border-radius: 0 !important;
+      margin-bottom: 10px;
+
+    }
+  }
+
+}

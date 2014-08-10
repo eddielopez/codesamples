@@ -1,0 +1,26 @@
+/***
+
+  INDUSTRY SORT appears on the business dashboard underneath the
+  Alliance Info table.
+
+***/
+
+.sidebar-main{
+  li {
+    padding: 5px 0;
+    span {
+      float: right;
+      width: 50px;
+      padding: 1px 0;
+      background: #4aa1d7;
+      text-align: center;
+      color: #fff;
+      &.active{
+        background: #f3ac06;
+      }
+    }
+  }
+  li + li {
+    border-top: 1px solid #dadada;
+  }
+} // must wrap div with class .sidebar for these styles to apply.

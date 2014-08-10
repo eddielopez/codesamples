@@ -1,0 +1,67 @@
+/***
+
+  TABS appear at the top of the following pages.
+
+    1. Alliances
+    2. B2b Exchange
+    3. Coop Marketing
+    3  Events
+    4. Wisdom
+    5. Dashboard
+
+  To target specific tabs that are in a portlets please use the portlet class wrapper.
+  If it is a web content please apply your own class.
+
+***/
+
+.header-content {
+
+  margin-top: -98px;
+
+  .nav-tabs{
+    border-bottom: 0;
+    > li {
+      width: 150px;
+      text-align: center;
+
+      &.active{
+        > a:hover{
+          border-color: #fff;
+        }
+
+        a{
+          background: #fff;
+          color: #343539;
+          border-color: #fff;
+          text-rendering: auto;
+        } // active state
+
+      }
+      > a {
+        border-radius: 0;
+        background: #18517f;
+        color: #fff;
+        border-color: #18517f;
+        margin-right: 7px;
+        font-size: 14px;
+        text-rendering: auto;
+
+        &:hover,
+        &:focus,
+        &:active{
+          color:#000;
+        } //hover
+
+      } // anchor
+
+      &.help a{
+        background: #ff0010;
+        border-color: #ff0010;
+        color: #fff;
+      }
+
+    } // li
+  } // nav-tabs
+
+
+} // end of header-content

@@ -1,0 +1,312 @@
+/***
+
+  STYLED MODALS appear throughout the winwin site.
+
+***/
+
+
+// Actual modal
+#forgetPswd{
+  display: none;
+}
+
+.modal-content {
+  border-radius: @border-radius-base;
+}
+
+.styled-modal{
+
+  select{
+    width: 100%;
+  }
+  .modal-header {
+    background-color: @styled-modal-header;
+    color: @styled-modal-text;
+  }
+  .modal-body{
+    color: @styled-modal-content;
+    max-height:100%;
+  }
+
+//form elements
+  input{
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    height: 47px;
+    line-height: 47px;
+    background: @styled-modal-input-bg;
+  }
+  .form-group > .pwd-content {
+    margin-right: -12px;
+    margin-left: 0;
+  }
+
+  .form-group > .retypepwd-content {
+    margin-left: -12px;
+    margin-right: 0;
+  }
+  .fields-group > div .row {
+    margin-right: -11px;
+  }
+
+  .has-success .control-label {
+    color: #333;
+  }
+
+  .has-feedback .form-control-feedback {
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+  }
+
+
+
+//modal responsive
+  @media (max-width: 767px) {
+    .modal-dialog {
+      max-width: none;
+    }
+
+    .form-group > .pwd-content {
+      margin-right: 0;
+    }
+
+    .form-group > .retypepwd-content {
+      margin-left: 0;
+    }
+    .btn-submit {
+      font-size: 20px;
+      padding: 10px 30px;
+    }
+  }
+
+}
+
+
+/*========[Registration Step 1]*/
+
+.reg-modal{
+  .line-divider{
+    position: absolute;
+    top: 15%;
+    right: 15px;
+  }
+  &.modal{
+    width: auto;
+
+    .modal-header{
+      padding: 15px;
+    }
+    .modal-body{
+      overflow-y: visible;
+      max-height: none !important;
+
+      .col-sm-6:after{
+        border-right: 1px solid red;
+      }
+
+      .media-heading{
+        margin-bottom: 30px;
+      }
+
+      div.text-center{
+        padding: 0 45px;
+        margin-top: 0;
+      }
+    }
+
+    .disclaimer{
+      margin: 25px auto;
+      max-width: 355px;
+      width: 100%;
+      text-align: center;
+
+      p{
+        font-size: 12px;
+      }
+    }
+
+  }
+
+
+  .modal-dialog {
+    width:770px;
+  }
+
+  .modal-content {
+    padding: 0 20px;
+  }
+
+  .modal-header {
+    margin: 0 -20px;
+    background: #505050;
+    box-shadow: inset 0px -4px 3px #333;
+    -webkit-box-shadow: inset 0px -4px 3px #333;
+  }
+
+  .modal-title {
+    color: #fff;
+    text-shadow: 2px -3px 4px #333;
+  }
+
+
+  .btn-submit {
+    background: #ff9600;
+    color: #fff;
+    font-size: 24px;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    padding: 7px;
+    margin-top: 5px;
+    width: 290px;
+  }
+
+  .btn-submit:hover, .btn-submit:focus {
+    color: #fff;
+  }
+
+  @media(max-width:776px){
+    .modal-dialog {
+      width:100%;
+    }
+  }
+
+} //reg modal
+
+/*==== [Additional Contacts]*/
+
+#addContacts, #login, #addStaff,  #addProduct, .win-modal{
+
+  .modal-dialog {
+    max-width: 623px;
+  }
+
+  .modal-content {
+    padding: 0 70px 0 40px;
+    background: #f1f1f1;
+    border: none;
+  }
+
+  .modal-header {
+    margin: 0 -70px 0 -40px;
+    background: #53a9da;
+  }
+
+  .modal-title {
+    color: #fff;
+  }
+
+  input{
+    background:#fff;
+  }
+  .btn-submit {
+    background: #ff9600;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    padding: 10px 20px;
+    margin-top: 20px;
+    min-height: 42px;
+    vertical-align: middle;
+  }
+
+  .btn-cancel {
+    background: #b6b6b6;
+    color: #fff;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    padding: 10px 30px;
+    margin-top: 20px;
+    display: inline-block;
+    min-height: 42px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+
+  .btn-submit:hover, .btn-submit:focus, .btn-cancel:hover, .btn-cancel:focus {
+    color: #fff;
+    text-decoration: none;
+  }
+
+} //add contacts, staff, login, product
+
+//add employee modal
+
+#addEmp{
+	.modal-body{
+		form{
+			overflow:hidden;
+		}
+	}
+}
+
+#cancelModal{
+  .modal-body{
+    padding: 0;
+  }
+  .modal-footer{
+    padding: 0px 15px 8px 15px;
+    background-color: #f2f2f2;
+    border-top-color: #f2f2f2;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+
+#addProduct{
+  .bootstrap-select{
+    button{
+      height: 48px;
+    } // button height
+
+    &.btn-group .btn .caret{
+      background: url("../images/assets/account-settings/addProductArrow.png");
+      width: 36px;
+      height: 35px;
+    }
+
+  }
+  input#description{
+    height: 90px;
+  }
+}
+
+#login{
+  .close{
+    font-size: 12px;
+    color: #fff;
+    opacity: 1;
+    text-shadow: none;
+  }
+  input[type="password"], input[type="email"], select.form-control {
+    background: #fff;
+    border: none;
+  }
+  }
+  #editPost{
+  	&.modal, .modal-dialog{
+  		max-width:312px;
+  		width:100%;
+  	}
+  	.modal-content{
+  		padding:0;
+	  	.modal-header{
+	  		text-align: center;
+			font-size: 21px;
+	  	  margin:0;
+	  	  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…EiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+		  background: -moz-linear-gradient(left, #2776a3 0%, #3298d1 100%);
+		  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #2776a3), color-stop(100%, #3298d1));
+		  background: -webkit-linear-gradient(left, #2776a3 0%, #3298d1 100%);
+		  background: -o-linear-gradient(left, #2776a3 0%, #3298d1 100%);
+		  background: -ms-linear-gradient(left, #2776a3 0%, #3298d1 100%);
+	  	}
+	  	.modal-body{
+	  	overflow:hidden;
+	  	}
+	  	}
+	  	}
+  

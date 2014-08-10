@@ -1,0 +1,130 @@
+/***
+
+  SEARCH FILTER appear at the top of the following pages.
+
+    1. Alliances
+    2. B2b Exchange
+    3. Coop Marketing
+    3  Events
+
+	NOTE: STYLED FILTER currently appears during the registration process
+	
+***/
+
+
+
+
+.content-filter{
+  padding: @cont-filter-padding;
+  background-color: @cont-filter-bg-color;
+  margin: @cont-filter-margin;
+  form{
+    input{
+      min-height: 35px;
+      color: #636363;
+      padding-left: 15px;
+      &:focus{
+        outline: none;
+      }
+    }
+    @media(max-width:767px){
+      input{
+        width: 100%;
+      }
+    }
+    button[type="submit"]{
+      padding: 4px 20px;
+      font-size: 18px;
+    /*float: right;*/
+    }
+  }
+  
+  //styled filter
+  &.styled-filter{
+  	color:#fff;
+    font-size: 18px;
+	  background-color:@styled-filter-bg-color;
+	  padding:@styled-filter-padding;
+	  margin:@styled-filter-margin;
+  		
+  	form{
+  		input,button{
+  			height:45px;
+  		}
+  		input{
+  			min-width:595px;
+        @media(max-width:1198px){
+          width: 100%;
+          min-width: 100%;
+        }
+  			@media(max-with:992px){
+  				width:100%;
+          min-width: 100%;
+  			}
+  		}
+  		button{
+        font-size: 18px;
+  			min-width:125px;
+  			@media(max-with:992px){
+  				width:100%;
+  			}
+  		}
+      .form-group:nth-child(2){
+        margin-left: 15px;
+      }
+      .form-group:nth-child(3){
+      margin: 0 5px;
+      padding: 18px 0;
+      }
+  	}
+  		
+  	}// form within filter
+
+
+    //skip registration
+    &.skip-reg{
+      font-size: 18px;
+      padding: 15px;
+      font-size: 18px;
+
+      button{
+        padding: 6px 33px;
+        height: 45px;
+        font-size: 18px;
+      }
+
+    }
+  
+} // form filter wrapper
+
+// STYLE STEP BOXES
+    .reg-steps{
+      height: 81px;
+      padding: 10px 14px;
+      background-color:@step-bg-color;
+      color:@step-txt-color;
+
+      span{
+        font-size:21px;
+      }
+      
+      }
+    
+
+
+// Form Elements
+::-webkit-input-placeholder {
+  color: @placeholder-text;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: @placeholder-text;;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: @placeholder-text;;
+}
+
+:-ms-input-placeholder {
+  color: @placeholder-text;;
+}

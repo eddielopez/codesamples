@@ -14,7 +14,7 @@
 <div ng-controller="B2bExchgCntrl">
     <%@include file="tabs.jsp" %>
         <div class="col-lg-12">
-            <div class="tab-content opportunities">
+            <div class="tab-content opporunities">
                 <%@include file="allExchange.jsp" %>
                 <%@include file="ourExchange.jsp" %>
                 <%@include file="savedExchange.jsp" %>

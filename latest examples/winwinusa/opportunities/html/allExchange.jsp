@@ -8,17 +8,19 @@
                     <%@include file="contentFilter.jsp" %>
                     
                      <div infinite-scroll="loadmore()" infinite-scroll-distance="0">
-                     	<div ng-repeat="exchange in allExchangeList track by $index" b2b-exchange portlet-path="<%=request.getContextPath()%>"></div>
+                     	<div ng-repeat="exchange in allExchangeList track by $index" b2b-exchange b2b-all-tab="true" portlet-path="<%=request.getContextPath()%>"></div>
                      </div><!-- loadMore -->
                              
-                	<div ng-show='loadmore.isBusy' class="text-center">
+                	<div ng-show='isBusy' class="text-center">
                 		<img src="/WinWinTheme-theme/images/assets/ajax-loader.gif" alt=""/>
                 	</div>
             </div>
         </div>
     </div>
     <%@include file="../modals/editB2b.html"%>
+    <%@include file="../modals/shareB2b.html"%>
     <%@include file="../modals/alert/removeB2b.html"%>
+    
     <!-- <script type="text/javascript">
 	     $(function(){
 	    	 $('.media-body').readmore({

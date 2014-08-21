@@ -1,0 +1,139 @@
+<div class="media">
+          <div class="pull-left content-left">
+            <a href="#">
+              <img class="media-object img-responsive" src="/WinWinTheme-theme/images/assets/opportunities/profile-blank.png" alt="">
+            </a>
+            <ul class="text-center options list-unstyled">
+              <div ng-show="allTab">
+	              <li>
+	                <a href="#" ng-click="saveListing($index)">
+	                  <img src="/WinWinTheme-theme/images/assets/opportunities/pin.png" />
+	                  <small>Save Listing</small>
+	                </a>
+	              </li>
+              </div>
+              <div ng-show="businessTab">
+              	<li>
+	                <a href="#" data-toggle="modal" data-target="#editPost" ng-click="editListing($index)">
+	                  <img src="/WinWinTheme-theme/images/assets/opportunities/settings.png" />
+	                  <small>Edit Listing</small>
+	                </a>
+	              </li>
+	              <li>
+	                <a href="#" data-toggle="modal" data-target="#removeB2b" ng-click="applyListingToRemove($index)">
+	                  <span class="glyphicon glyphicon-trash"></span>
+	                  <small>Delete Listing</small>
+	                </a>
+	              </li>
+              </div>
+              <div ng-show="savedTab">
+	              <li>
+	                <a href="#" ng-click="unsaveListing($index)">
+	                  <img src="/WinWinTheme-theme/images/assets/opportunities/pin.png" />
+	                  
+	                  <small>Unsave Listing</small>
+	                </a>
+	              </li>
+              </div>
+            </ul>
+          </div>
+          <div class="pull-right post-info text-center">
+            <img src="/WinWinTheme-theme/images/assets/opportunities/loudspeaker.png" />
+          </div>
+          <div class="media-body"  read-more>
+            <h4 class="media-heading">{{exchange.headline}}</h4>
+            <p><i>Posted by <a href="">{{exchange.businessName}}</a> 2 days 2 hours ago</i></p>
+            <p>{{exchange.message}}</p>
+            <p>
+            	<div class="embed-responsive embed-responsive-16by9"  ng-show="exchange.youtubeUrl">
+	            	<iframe id="player" class="embed-responsive-item" type="text/html" width="400" height="185"
+	  						ng-src="{{exchange.youtubeUrl}}"
+	  						frameborder="0">
+	  				</iframe>
+	  			</div><!-- responsive embed -->
+            </p><!-- emdeded youtube video -->
+            <!-- 
+            <p ng-show="exchange.image">
+				<img ng-src="{{exchange.image}}" class="img-responsive" />
+			</p>
+            -->
+            <p><strong>POSTING DETAILS</strong></p>
+            <table class="table table-striped">
+              <tbody>
+                <tr class="hidden">
+                  <td width="50%"><strong>Is your business offering services or seeking them?</strong></td>
+                  <td width="50%">We are offering services</td>
+                </tr>
+                <tr>
+                  <td width="50%"><strong>Post's Expiration Date</strong></td>
+                  <td width="50%">{{exchange.lastModifiedTimestamp | date : 'EEEE, MMMM d, yyyy - hh:mm'}}</td>
+                </tr>
+                <tr>
+                  <td width="50%"><strong>What type of service is this?</strong></td>
+                  <td width="50%">Professional</td>
+                </tr>
+                <tr class="hidden">
+                  <td width="50%"><strong>Professional Service Type</strong></td>
+                  <td width="50%">Other</td>
+                </tr>
+              </tbody>
+            </table>
+            <ul class="list-inline text-center">
+              <li><a class="btn-link btn-blue" href="#" data-toggle="modal" data-target="#shareB2b" ng-click="listingToShare(exchange)">Share With Allies</a></li>
+              <li><a class="btn-link" href="/messages">Private Message</a></li>
+            </ul>
+           
+           	<div ng-show="allTab || savedTab""> 
+	            <textarea class="form-control comments" rows="5" ng-model="comment" placeholder="Create Comment.."></textarea>
+	            <div class="text-right btn-comment">
+	             <button class="btn btn-primary" ng-click="addComment()">Post Comment</button>
+	            </div><!--  post button -->
+	        </div>
+            
+             <div ng-show="commentsExpanded" class="listing-comments">
+           		<div class="media" ng-repeat="c in comments">
+				      <a class="pull-left" href="#">
+				        <img class="media-object" src="/WinWinTheme-theme/images/assets/listings/comment-placeholder-img.jpg">
+				      </a>
+				      {{c}}
+				      <div class="media-body">
+						<strong>{{c.businessName}}</strong> {{c.comment}}
+						
+						<div class="listing-reply">
+                           <a href="#"><strong>Reply to Comment</strong></a>
+                        </div>
+                        
+						<div class="listing-reply-body" >
+			                    <form>
+			                      <div class="form-group" style="margin-bottom:0;">
+			                      	
+			                      	<textarea class="form-control" row="3" ng-model="commentReply"></textarea>
+			                     </div>
+			
+			                      <div class="text-right listing-reply-btns">
+			                        <button class="btn btn-default">Cancel</button>
+			                        <button class="btn btn-primary" ng-click="addCommentReply(c, commentReply)">Post Comment</button>
+			                      </div><!-- reply-btns -->
+			  
+			                    </form>
+			                </div><!-- listin-reply-body -->
+			                
+			                
+						<!-- replyed comment -->
+	                    <div class="media" ng-repeat="reply in c.replies">
+	                      <a class="pull-left" href="#">
+	                        <img class="media-object" src="/WinWinTheme-theme/images/assets/listings/comment-placeholder-img.jpg">
+	                      </a>
+	                      <div class="media-body">
+	                          <strong>TODO add business</strong> {{reply.comment}}
+	                      </div>
+	                    </div>
+				      </div><!--  media-body -->
+	    			</div><!-- media -->
+           		</div><!-- expanding comments -->
+
+          
+
+            <div class="comments-info text-center" ng-click="toggleComments()"><strong>({{exchange.commentCount}}) Comments</strong></div>
+          </div>
+        </div>

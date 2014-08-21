@@ -2,7 +2,7 @@
                     	<form class="form-inline" role="form" ng-submit="search()">
                        		<div class="form-group">
                             	<select class="form-control selectpicker" id="filter_type" ng-model="searchRequest.exchange">
-	                                <option value="none">- Select Exchange -</option>
+	                                <option value="all">- Select Exchange -</option>
 	                                <option value="Concert">Concert</option>
 	                                <option value="Conference">Conference</option>
 	                                <option value="Conference Call">Conference Call</option>
@@ -21,7 +21,7 @@
 	                        </div>
 	                        <div class="form-group">
 	                            <select class="form-control selectpicker" id="filter_dist" ng-model="searchRequest.distance">
-	                                <option value="none">- Within -</option>
+	                                <option value="0">- Within -</option>
 	                                <option value="5">5 Miles</option>
 	                                <option value="10">10 Miles</option>
 	                                <option value="15">15 Miles</option>

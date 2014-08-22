@@ -1,0 +1,107 @@
+
+
+  <div class="row marketing">
+
+  <aside class="search-sidebar col-md-3">
+
+    <div class="panel panel-default">
+        <div class="panel-heading">Reddit Username 
+          <a  class="glyphicon glyphicon-question-sign" 
+              tooltip-placement="top" 
+              tooltip="Check out these user's comments"
+            >
+          </a>
+        </div><!-- end panel-heading -->
+
+        <div class="panel-body">
+          <ul class="list-unstyled">
+            <li>Karmanaut</li>
+            <li>zelgius</li>
+            <li>Sockin</li>
+            <li>Libertatea</li>
+          </ul>
+        </div><!-- end .panel-body -->
+
+    </div><!-- end .panel-default -->
+  </aside><!--  sidebar-->
+  
+  <div class="search-area col-md-9">
+    
+    <div class="search-form clearfix">
+          <form class="inline-form" name="form" ng-submit="searchReddit()">
+            <div class="form-group row">
+              <div class="col-md-8">
+                  <input class="form-control" name="search" type="text" placeholder="Search for users latest comments on reddit :)" required 
+                   ng-model="name"
+                   ng-pattern="/^[a-zA-Z0-9]*$/"
+                   >
+                   <p ng-show="form.search.$invalid && !form.search.$pristine" class="text-danger">Username is required.</p>
+                   <p ng-show="form.search.$error.pattern" class="text-danger">No special characters allowed.</p>
+              </div><!-- end col-md-10 -->
+              <div class="col-md-2">
+                <div class="row">
+                   <select class="form-control" ng-model="limit">
+                    <option value="5">5  Comments</option>
+                    <option value="10">10 Comments</option>
+                    <option value="15">15 Comments</option>
+                    <option value="20">20 Comments</option>
+                    <option value="25">25 Comments</option>
+                    <option value="30">30 Comments</option>
+                    <option value="35">35 Comments</option>
+                    <option value="40">40 Comments</option>
+                    <option value="45">45 Comments</option>
+                    <option value="50">50 Comments</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <button class="btn btn-primary form-control" ng-disabled="form.$invalid">Search</button>
+              </div><!-- end col-md-2 --> 
+            </div><!-- form-group -->
+          </form>
+    </div><!-- end search-form -->
+
+
+      <div class="media search-result" ng-repeat="listing in listings | orderBy: 'body'">
+          <div class="media-body">
+            <h4 class="media-heading">{{listing.link_title}}</h4>
+
+              <div class="author">
+                <ul class="list-unstyled list-inline">
+                  <li><span class="glyphicon glyphicon-user"></span> {{listing.link_author}}</li>
+                </ul>
+              </div>
+
+              <div class="media">
+                <a class="pull-left" href="#">
+                  <img class="media-object" src="/images/comments/avatar.gif">
+                </a>
+                <div class="media-body">
+                    {{listing.body}}
+
+                    <div class="author">
+                      <ul class="unstyle-list list-inline">
+                        <li><span class="glyphicon glyphicon-calendar"></span> {{listing.created * 1000 | date:'MM/dd/yyyy'}}</li>
+                        <li><span class="glyphicon glyphicon-user"></span> {{listing.author}}</li>
+                        <li><span class="glyphicon glyphicon-fire"></span> Score {{listing.score}}</li>
+                      </ul>
+                    </div>
+                </div>
+            </div><!-- comment -->
+          </div><!-- end .media-body -->
+        </div> 
+
+      <ul class="pager" ng-show="data">
+        <li class="previous" ng-class="{'disabled': data.before == null}">
+          <a href="" ng-click="searchReddit(data.before, data.after = '')">&larr; Older</a>
+        </li>
+        <li class="next" ng-class="{'disabled': data.after == null}">
+          <a href="" ng-click="searchReddit(data.after)">Newer &rarr;</a>
+        </li>
+      </ul>
+
+  </div><!--  end .search-area --> 
+
+  </div><!-- end row -->
+
+

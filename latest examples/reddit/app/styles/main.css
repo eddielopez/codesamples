@@ -1,0 +1,112 @@
+/* Space out content a bit */
+body {
+  background-color: #e8ebed;
+}
+
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+  padding: 80px 0 70px 0;
+}
+
+/*======================[nav]*/
+.navbar-default{
+  background-color: #fff;
+}
+
+.navbar-nav li{
+  float: none;
+  display: inline-block;
+}
+.main-menu nav li a{
+  font-size: 16px;
+  color: #4b4e5d !important;
+  text-transform: uppercase;
+  padding: 30px 15px;
+}
+
+/*=====================[Search Sidebar]*/
+.search-sidebar .panel-default{
+  border-color: transparent;
+}
+.search-sidebar .panel{
+  border:none;
+}
+
+.search-sidebar .panel-heading{
+  color: #fff;
+  background-color: #34495e;
+  border-color:transparent;
+  font-size: 15px;
+}
+.search-sidebar .panel-heading a{
+  color:#8FCBFF;
+}
+.search-sidebar .panel-heading a:hover,
+.search-sidebar .panel-heading a:focus{
+  color:#ffF;
+  text-decoration:none;
+  cursor:pointer;
+}
+.search-sidebar .panel-body ul li{
+  padding: 10px;
+  margin-bottom: 3px;
+  color: #000;
+  background-color: #f4f4f4;
+}
+/*=====================[Search Area] */
+.search-area .header-title {
+  margin-top: 0;
+  font-size: 30px;
+}
+.search-area .search-result, .search-filters{
+  margin-top: 50px;
+}
+
+/*individual comments*/
+.search-area .media{
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 3px;
+}
+.search-area .media-heading{
+  text-transform: uppercase;
+}
+.search-area .media-body .author{
+    color: #afafaf;
+    font-size: 13px;
+    padding: 10px 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #dddfeb;
+}
+
+.filters{
+  margin-top: 50px;
+}
+
+/*search form components*/
+.search-form input, .search-form select, .search-form .btn{ 
+  height: 48px;
+  border-radius: 3px;
+}
+.search-form input, .search-form select
+{
+  box-shadow: none;
+  border: none;
+}
+
+.search-form .btn-primary{
+  background-color: #34495e;
+  border-color: #34495e;
+}
+.search-form .btn-primary:hover,
+.search-form .btn-primary:focus{
+  cursor: pointer;
+  background-color: #3f566e;
+}
+/*====================[Bootstrap Pager]*/
+
+.pager .next > a:focus{
+  background-color: transparent;
+}
